@@ -51,6 +51,8 @@ const MouseTooltip: FunctionComponent<Props> = (
 
   return (
     <div
+      onPointerEnter={removeListener}
+      onPointerLeave={addListener}
       className={className}
       style={{
         display: visible && mouseMoved ? 'block' : 'none',
